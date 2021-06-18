@@ -11,24 +11,38 @@ namespace VSProject
 
             if (opcaoString == "c")
             {
-                Console.WriteLine("Digite a temperatura em Graus Celsius:");
-                string celsiusString = Console.ReadLine();
-                double celsiusDouble = Convert.ToDouble(celsiusString);
-
-                double operacaoC = (celsiusDouble * 9 / 5) + 32;
-                string mensagem = string.Format("{0}°C equivale {1}°F", celsiusDouble, operacaoC);
-                Console.WriteLine(mensagem);
+                ConvertToFahrenheit();
             }
             else if (opcaoString == "f")
             {
-                Console.WriteLine("Digite a temperatura em Fahrenheit:");
-                string fahrenheitString = Console.ReadLine();
-                double fahrenheitDouble = Convert.ToDouble(fahrenheitString);
-
-                double operacaoF = (fahrenheitDouble - 32) * 5 / 9;
-                string mensagem = string.Format("{0}°F equivale {1}°C", fahrenheitDouble, operacaoF);
-                Console.WriteLine(mensagem);
+                ConvertToCelsius();
             }
         }
+
+
+        static void ConvertToFahrenheit()
+        {
+            Console.WriteLine("Digite a temperatura em Graus Celsius:");
+            string celsiusString = Console.ReadLine();
+            double celsiusDouble = Convert.ToDouble(celsiusString);
+
+            double operacaoC = (celsiusDouble * 9 / 5) + 32;
+            string mensagem = string.Format("{0}°C equivale {1}°F", celsiusDouble, operacaoC);
+            Console.WriteLine(mensagem);
+        }
+
+
+        static void ConvertToCelsius()
+        {
+            Console.WriteLine("Digite a temperatura em Fahrenheit:");
+            string fahrenheitString = Console.ReadLine();
+            double fahrenheitDouble = Convert.ToDouble(fahrenheitString);
+
+            double operacaoF = (fahrenheitDouble - 32) * 5 / 9;
+            string mensagem = string.Format("{0}°F equivale {1}°C", fahrenheitDouble, operacaoF);
+            Console.WriteLine(mensagem);
+        }
+
+
     }
 }
